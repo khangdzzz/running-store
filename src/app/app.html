@@ -1,0 +1,87 @@
+<div class="page-shell">
+  <header class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Running Store</span>
+      <h1>Chọn đôi giày chạy phù hợp cho từng nhịp chân.</h1>
+      <p class="hero-text">
+        PaceRun Store là landing page giới thiệu cửa hàng giày chạy bộ với những lựa chọn gọn,
+        dễ hiểu và đủ đẹp để dùng làm trang mở đầu cho shop online hoặc brochure giới thiệu.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#collections">Xem bộ sưu tập</a>
+        <a class="button button-secondary" href="#benefits">Lý do chọn shop</a>
+      </div>
+
+      <ul class="stats" aria-label="Thống kê cửa hàng">
+        @for (stat of stats; track stat.label) {
+          <li class="stat-card">
+            <strong>{{ stat.value }}</strong>
+            <span>{{ stat.label }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="hero-card" aria-label="Giày nổi bật">
+      <span class="card-tag">Best seller</span>
+      <h2>Velocity Pro 4</h2>
+      <p>
+        Thiết kế nhẹ, đệm êm và linh hoạt cho runner thích một đôi giày có thể đi từ daily run
+        đến long run cuối tuần.
+      </p>
+
+      <div class="shoe-art" aria-hidden="true">
+        <div class="shoe-glow"></div>
+        <div class="shoe-body"></div>
+      </div>
+
+      <div class="price-row">
+        <span class="price">Từ 2.390.000đ</span>
+        <span class="shipping">Miễn phí giao nội thành</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="collections">
+    <div class="section-heading">
+      <span class="eyebrow">Bộ sưu tập nổi bật</span>
+      <h2>Ba nhóm sản phẩm cơ bản để khách xem là hiểu ngay.</h2>
+    </div>
+
+    <div class="collection-grid">
+      @for (collection of collections; track collection.name) {
+        <article class="info-card">
+          <span class="pill">{{ collection.badge }}</span>
+          <h3>{{ collection.name }}</h3>
+          <p>{{ collection.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section section-soft" id="benefits">
+    <div class="section-heading">
+      <span class="eyebrow">Dịch vụ</span>
+      <h2>Một trang ngắn gọn nhưng vẫn đủ để tạo cảm giác tin tưởng.</h2>
+    </div>
+
+    <div class="benefit-grid">
+      @for (benefit of benefits; track benefit.title) {
+        <article class="benefit-card">
+          <h3>{{ benefit.title }}</h3>
+          <p>{{ benefit.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <span class="eyebrow">Sẵn sàng lên trang</span>
+      <h2>Trang này đã đủ gọn để deploy ngay lên Vercel và dùng làm landing page giới thiệu shop.</h2>
+    </div>
+
+    <a class="button button-primary" href="mailto:hello@pacerun.store">Liên hệ cửa hàng</a>
+  </section>
+</div>
